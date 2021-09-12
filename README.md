@@ -1,13 +1,13 @@
 # README
 ## users
-|Column   |Type   |Options                    |
-|---      |---    |---                        |
-|nickname |string |null: false                |
-|email    |string |null: false, unique: true  |
-|password |string |null: false                |
-|name     |string |null: false                |
-|nama_kana|string |null: false                |
-|birth    |integer|null: false                |
+|Column             |Type   |Options                    |
+|---                |---    |---                        |
+|nickname           |string |null: false                |
+|email              |string |null: false, unique: true  |
+|encrypted_password |string |null: false                |
+|name               |string |null: false                |
+|nama_kana          |string |null: false                |
+|birth              |integer|null: false                |
 
 ### Association
 - has_many :items
