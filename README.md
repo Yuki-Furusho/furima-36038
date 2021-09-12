@@ -7,7 +7,7 @@
 |password |string |null: false                |
 |name     |string |null: false                |
 |nama_kana|string |null: false                |
-|birth    |integer|null: false                |
+|birth    |integer|null: false                 |
 
 ### Association
 - has_many :items
