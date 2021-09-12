@@ -15,28 +15,28 @@
 - has_many :shipping_addresses
 
 ## items
-|Column       |Type   |Options                        |
-|---          |---    |---                            |
-|name         |string |null: false                    |
-|image        |string |null: false                    |
-|detail       |text   |null: false                    |
-|category     |string |null: false                    |
-|condition    |string |null: false                    |
-|delivery_fee |string |null: false                    |
-|send_from    |string |null: false                    |
-|ship_days    |string |null: false                    |
-|price        |integer|null: false                    |
-|user         |integer|null: false, foreign_key: true |
+|Column       |Type       |Options                        |
+|---          |---        |---                            |
+|name         |string     |null: false                    |
+|image        |string     |null: false                    |
+|detail       |text       |null: false                    |
+|category     |string     |null: false                    |
+|condition    |string     |null: false                    |
+|delivery_fee |string     |null: false                    |
+|send_from    |string     |null: false                    |
+|ship_days    |string     |null: false                    |
+|price        |integer    |null: false                    |
+|user         |references |null: false, foreign_key: true |
 
 ### Association
 - belongs_to :users
 - has_one :orders
 
 ## orders
-|Column |Type   |Options    |
-|---    |---    |---        |
-|item   |string |null: false|
-|user   |string |null: false|
+|Column |Type       |Options    |
+|---    |---        |---        |
+|item   |references |null: false|
+|user   |references |null: false|
 
 ### Association
 - belongs_to :users
@@ -44,15 +44,15 @@
 - has_one :shipping_addresses
 
 ## shipping_addresses
-|Column     |Type   |Options                        |
-|---        |---    |---                            |
-|postal_code|integer|null: false                    |
-|prov       |string |null: false                    |
-|city       |string |null: false                    |
-|address    |string |null: false                    |
-|building   |string |---                            |
-|phone      |integer|null: false                    |
-|user       |string |null: false, foreign_key: true |
+|Column     |Type       |Options                        |
+|---        |---        |---                            |
+|postal_code|integer    |null: false                    |
+|prov       |string     |null: false                    |
+|city       |string     |null: false                    |
+|address    |string     |null: false                    |
+|building   |string     |---                            |
+|phone      |integer    |null: false                    |
+|user       |references |null: false, foreign_key: true |
 
 ### Association
 - belongs_to :orders
