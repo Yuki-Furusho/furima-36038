@@ -1,20 +1,20 @@
 <mxfile host="65bd71144e">
     <diagram id="HG5_S1IwpvVztm-JOkL6" name="ページ1">
-        <mxGraphModel dx="1409" dy="586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1173" dy="586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="28" value="users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="200" y="40" width="160" height="130" as="geometry"/>
+                    <mxGeometry x="200" y="40" width="160" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="nickname&#10;email&#10;encrypted_password&#10;name&#10;name_kana&#10;birth" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="28">
-                    <mxGeometry y="30" width="160" height="100" as="geometry"/>
+                <mxCell id="29" value="nickname&#10;email&#10;password&#10;first_name&#10;last_name&#10;first_name_kana&#10;last_name_kana&#10;birth" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="28">
+                    <mxGeometry y="30" width="160" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" value="items" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry y="160" width="160" height="190" as="geometry"/>
+                    <mxGeometry y="160" width="160" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="name&#10;image&#10;detail&#10;category&#10;condition&#10;delivery_fee&#10;send_from&#10;shop_days&#10;price&#10;user" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="30">
-                    <mxGeometry y="30" width="160" height="160" as="geometry"/>
+                <mxCell id="31" value="name&#10;detail&#10;category_id&#10;condition_id&#10;delivery_fee_id&#10;prov_id&#10;shop_days_id&#10;price&#10;user" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="30">
+                    <mxGeometry y="30" width="160" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;startSize=15;startArrow=ERmany;startFill=0;endArrow=ERone;endFill=0;endSize=10;" edge="1" parent="1" source="32" target="29">
                     <mxGeometry relative="1" as="geometry">
@@ -30,13 +30,13 @@
                 <mxCell id="37" value="shipping_addresses" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
                     <mxGeometry x="400" y="160" width="160" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="user&#10;postal_code&#10;prov&#10;city&#10;address&#10;building&#10;phone" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="37">
+                <mxCell id="38" value="postal_code&#10;prov&#10;city&#10;address&#10;building&#10;phone&#10;order" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="37">
                     <mxGeometry y="30" width="160" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;fontSize=14;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;startSize=10;endSize=10;" edge="1" parent="1" source="33" target="31">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="70" y="410"/>
+                            <mxPoint x="80" y="410"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
