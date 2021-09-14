@@ -31,7 +31,7 @@
 
 ### Association
 - belongs_to :user
-- has_one :orders
+- has_one :order
 
 ## orders
 |Column |Type       |Options                        |
@@ -56,4 +56,4 @@
 |order      |references |null: false, foreign_key: true |
 
 ### Association
-- belongs_to :orders
+- belongs_to :order
