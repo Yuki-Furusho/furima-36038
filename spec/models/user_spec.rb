@@ -22,6 +22,11 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include "Email can't be blank"
       end
+      it 'メールアドレスに@を含まない場合登録できない' do
+        @user.email = Faker::Lorem.characters
+        @user.valid?
+        expect(@user.errors.full_messages).to include "Email is invalid"
+      end
       it '重複したemailが存在する場合登録できない' do
         @user.save
         another_user = FactoryBot.build(:user)
@@ -34,10 +39,20 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include "Password can't be blank"
       end
-      it 'passwordが英数字混合でない場合登録できない' do
-        @user.password = Faker::Number.number(digits: 6)
+      it 'passwordが数字のみの場合登録できない' do
+        @user.password = '123456'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Password confirmation doesn't match Password"
+        expect(@user.errors.full_messages).to include "Password is invalid"
+      end
+      it 'passwordが英字のみの場合登録できない' do
+        @user.password = 'qwerty'
+        @user.valid?
+        expect(@user.errors.full_messages).to include "Password is invalid"
+      end
+      it 'passwordが全角文字を含む場合登録できない' do
+        @user.password = 'あいうえお'
+        @user.valid?
+        expect(@user.errors.full_messages).to include "Password is invalid"
       end
       it 'passwordが5文字以下では登録できない' do
         @user.password = Faker::Lorem.characters(number:5, min_alpha:1, min_numeric: 1)
