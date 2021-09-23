@@ -1,4 +1,4 @@
-class Category < ActiveHash::Base
+class Prov < ActiveHash::Base
   self.data = [
     {id: 1, name: '---'},
     {id: 2, name: '北海道'}, 
@@ -52,5 +52,5 @@ class Category < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :items
-  
+
 end
