@@ -23,7 +23,8 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    unless current_user == @item.user
+    item = Item.find(params[:id])
+    if current_user =! item.user || Order.exists?(item_id: item.id)
       redirect_to action: :index
     end
   end
