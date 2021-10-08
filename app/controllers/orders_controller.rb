@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
+  before_action item_find
 
   def index
-    item_find
     @order_address = OrderAddress.new
     if current_user == @item.user || Order.exists?(item_id: @item.id)
       redirect_to root_path
@@ -10,7 +10,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    item_find
     @order_address = OrderAddress.new(order_params)
     if @order_address.valid?
       pay_item
