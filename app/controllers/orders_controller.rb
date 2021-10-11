@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  before_action item_find
+  before_action :item_find
 
   def index
     @order_address = OrderAddress.new
