@@ -1,7 +1,4 @@
 class User < ApplicationRecord
-  has_many :items
-  has_many :orders
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
@@ -14,5 +11,7 @@ class User < ApplicationRecord
     validates :first_name_kana, format: { with: /\A[ァ-ヶ一]+\z/ }
     validates :birth
   end
+  has_many :items
+  has_many :orders
 
 end

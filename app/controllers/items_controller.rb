@@ -23,8 +23,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    item = Item.find(params[:id])
-    if current_user =! item.user || Order.exists?(item_id: item.id)
+    if current_user != @item.user || Order.exists?(item_id: @item.id)
       redirect_to action: :index
     end
   end
@@ -45,7 +44,7 @@ class ItemsController < ApplicationController
     else
       redirect_to root_path
     end
-  end
+  end  
 
   private
 
